@@ -39,8 +39,7 @@
 default:
   image: ubuntu:18.04
 
-tags:
-    - gleb-runner
+
   #
   # Pick zero or more services to be used on all builds.
   # Only needed when using a docker container to run your tests in.
