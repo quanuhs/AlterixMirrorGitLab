@@ -38,7 +38,7 @@ variables:
   MYSQL_PASSWORD: $MYSQL_PASS
 
 default:
-  image: ubuntu:20.04
+  image: ubuntu:18.04
   #
   # Pick zero or more services to be used on all builds.
   # Only needed when using a docker container to run your tests in.
@@ -54,7 +54,7 @@ default:
   before_script:
     - apt -y update
     - apt -y install apt-utils
-    - apt -y install net-tools python3.8 python3-pip mysql-client libmysqlclient-dev
+    - apt -y install net-tools python3.8 python3-pip 
     - apt -y upgrade
     - pip3 install -r requirements.txt
 
