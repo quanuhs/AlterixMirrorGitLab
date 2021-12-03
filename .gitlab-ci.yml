@@ -11,6 +11,8 @@ stages:
   - build
 
 build1:
+  tags:
+    - asdee
   stage: build
   script:
     - docker build -t new-image .
