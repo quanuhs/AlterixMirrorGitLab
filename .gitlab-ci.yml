@@ -17,6 +17,6 @@ build1:
   script:
     - echo 'start'
     - docker build -t new-image .
-    - docker run -d -p 8080:8080 new-image:latest 
+    - docker run -d -p 8000:8080 new-image:latest 
     - curl 0.0.0.0:8080
 
