@@ -18,7 +18,7 @@ build1:
     - echo 'start'
     - docker build -t new-image .
     - docker run -d -p 443:443 new-image:latest 
-    - curl 0.0.0.0:443
+    - curl https://0.0.0.0:443
   after_script:
     - docker stop $(docker ps -q)
 
