@@ -41,4 +41,4 @@ class CalculateDataForm(Form):
   s_coef = FloatField("s coefficient", validators=[InputRequired()])
   u_coef = FloatField("u coefficient", validators=[InputRequired()])
   time_lower = IntegerField("Time lower bound (t0)", validators=[InputRequired()])
-  time_higher = IntegerField("Time heigher bound (t1)", validators=[InputRequired()])
+  time_higher = IntegerField("Time higher bound (t1)", validators=[InputRequired()])
