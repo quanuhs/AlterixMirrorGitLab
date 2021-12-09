@@ -60,7 +60,7 @@ class Contract(Base):
       self.ratings.append(Rating(self.id, user_id, self.provider_id, second_points))
     
     elif user_id == self.provider_id:
-      self.ratings.append(Rating(self.id, user_id, self.tenant_id, second_points))
+      self.ratings.append(Rating(self.id, user_id, self.tenant_id, first_points))
       self.ratings.append(Rating(self.id, user_id, self.owner_id, second_points))
 
 
