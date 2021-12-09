@@ -100,7 +100,7 @@ def create_contract_page():
 
     _contract = Contract(owner.id, tenant.id, provider.id, start_date, end_date)
     app.session.add(_contract)
-    _contract.rate_all((form["owner_rate_tenant"].data, form["owner_rate_provider"].data),(form["tenant_rate_owner"].data, form["tenant_rate_provider"].data),(form["provider_rate_owner"].data, form["provider_rate_tenant"].data))
+    _contract.rate_all((form["owner_rate_tenant"].data, form["owner_rate_provider"].data),(form["tenant_rate_owner"].data, form["tenant_rate_provider"].data),(form["provider_rate_tenant"].data, form["provider_rate_owner"].data))
     
     app.session.commit()
 

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}
-Пользователь {{ user.name }}
+User {{ user.name }}
 {% endblock %}
 
 {% block content %}
@@ -98,7 +98,7 @@
                 <td>{{contract.owner.name}}</td>
                 <td>{{contract.tenant_rated[0].rate}}</td>
                 <td>{{contract.provider.name}}</td>
-                <td>{{contract.owner_rated[1].rate}}</td>
+                <td>{{contract.tenant_rated[1].rate}}</td>
                 <td>{{contract.duration}}</td>
               </tr>
               {% endfor %}

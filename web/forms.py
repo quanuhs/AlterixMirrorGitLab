@@ -29,7 +29,7 @@ class ContractForm(Form):
   tenant_rate_provider = SelectField("Rate Proctor", choices=contract_rate_choices, validators=[NumberRange(0, 5), InputRequired()])
 
   provider_rate_tenant = SelectField("Rate Tenant",choices=contract_rate_choices,  validators=[NumberRange(0, 5), InputRequired()])
-  provider_rate_owner = SelectField("Rate Proctor",choices=contract_rate_choices,  validators=[NumberRange(0, 5), InputRequired()])
+  provider_rate_owner = SelectField("Rate Owner",choices=contract_rate_choices,  validators=[NumberRange(0, 5), InputRequired()])
 
   
 
