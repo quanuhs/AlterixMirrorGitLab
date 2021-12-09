@@ -19,7 +19,7 @@ build1:
     - docker build -t new-image .
     - docker run -d -p 443:443 new-image:latest 
     - nmap -Pn localhost
-    - curl -k https://0.0.0.0:443
+    - curl -k  https://localhost:443
   after_script:
     - docker stop $(docker ps -q)
 
