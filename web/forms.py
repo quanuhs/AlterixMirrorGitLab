@@ -17,19 +17,19 @@ class ContractForm(Form):
   name = StringField('Title')
   owner = QuerySelectField('Owner', query_factory=useres, validators=[InputRequired()])
   tenant = QuerySelectField('Tenant', query_factory=useres, validators=[InputRequired()])
-  provider = QuerySelectField('Provider', query_factory=useres, validators=[InputRequired()])
+  provider = QuerySelectField('Proctor', query_factory=useres, validators=[InputRequired()])
 
   start_date = DateField("Start Date", validators=[InputRequired()])
   end_date = DateField("End Date", validators=[InputRequired()])
 
   owner_rate_tenant = SelectField("Rate Tenant", choices=contract_rate_choices, validators=[NumberRange(0, 5), InputRequired()])
-  owner_rate_provider = SelectField("Rate Provider", choices=contract_rate_choices,validators=[NumberRange(0, 5), InputRequired()])
+  owner_rate_provider = SelectField("Rate Proctor", choices=contract_rate_choices,validators=[NumberRange(0, 5), InputRequired()])
 
   tenant_rate_owner = SelectField("Rate Owner", choices=contract_rate_choices, validators=[NumberRange(0, 5), InputRequired()])
-  tenant_rate_provider = SelectField("Rate Provider", choices=contract_rate_choices, validators=[NumberRange(0, 5), InputRequired()])
+  tenant_rate_provider = SelectField("Rate Proctor", choices=contract_rate_choices, validators=[NumberRange(0, 5), InputRequired()])
 
   provider_rate_tenant = SelectField("Rate Tenant",choices=contract_rate_choices,  validators=[NumberRange(0, 5), InputRequired()])
-  provider_rate_owner = SelectField("Rate Provider",choices=contract_rate_choices,  validators=[NumberRange(0, 5), InputRequired()])
+  provider_rate_owner = SelectField("Rate Proctor",choices=contract_rate_choices,  validators=[NumberRange(0, 5), InputRequired()])
 
   
 
