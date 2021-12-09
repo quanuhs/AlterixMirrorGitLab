@@ -6,6 +6,7 @@ RUN apt-get update && \
 WORKDIR /
 COPY . .
 RUN pip3 install -r requirements.txt
+RUN cat config.py
 
 EXPOSE 8080
 
