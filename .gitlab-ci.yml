@@ -18,8 +18,7 @@ build1:
     - echo 'start'
     - docker build -t new-image .
     - docker run -d -p 443:443 new-image:latest 
-    - nmap -Pn localhost
-    - wget https://localhost:443
+    - nmap -p localhost 443
   after_script:
-    - docker stop $(docker ps -q)
+    - docker rm -f $(docker ps -q)
 
